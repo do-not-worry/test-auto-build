@@ -1,0 +1,11 @@
+#!/bin/sh
+#当我push sp-dev时触发test环境自动构建
+
+targetBranch="sp-dev"
+currentBranch=`git branch | grep '*' | sed 's/^* //g'`
+if [ ${currentBranch} == ${targetBranch} ];then
+	#执行ssh触发虚拟机运行shell文件
+fi
+
+exit 0
+
