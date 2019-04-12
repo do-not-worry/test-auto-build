@@ -4,7 +4,7 @@
 targetBranch="sp-dev"
 currentBranch=`git branch | grep '*' | sed 's/^* //g'`
 if [ ${currentBranch} == ${targetBranch} ];then
-	#执行ssh触发虚拟机运行shell文件
+	#执行ssh触发虚拟机运行shell文件,注意需要后台&运行否则阻塞push操作
 fi
 
 exit 0
